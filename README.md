@@ -16,58 +16,99 @@ The system follows a multi-stage pipeline:
 
 
 Problem Input
+
 → Classification
+
 → Pattern Retrieval
+
 → Planning
+
 → Code Generation
+
 → Execution
+
 → Evaluation
+
 → Retry Loop
-Components
-Classifier
+
+
+### Components
+
+**Classifier**  
 Identifies the underlying algorithmic pattern (e.g., sliding window, dynamic programming, graph traversal).
-Retriever
-Fetches structured pattern knowledge including usage guidelines and templates.
-Planner
-Generates a step-by-step solution strategy, pseudocode, and edge cases.
-Code Generator
-Produces Python code based on the plan and retrieved pattern.
-Tester
-Executes the generated code against test cases.
-Evaluation Loop
-If tests fail, the system uses feedback to iteratively refine and fix the solution.
-Key Features
-Multi-stage reasoning pipeline instead of single-shot prompting
-Pattern-aware problem solving
-Execution-based validation of generated code
-Automatic retry and repair loop for failed solutions
-FastAPI backend for programmatic access
-Streamlit interface for interactive usage
-Tech Stack
-Python
-FastAPI
-Streamlit
-Claude API (Anthropic)
-FAISS (for vector-based retrieval, if enabled)
-Benchmark Results
 
-The system was evaluated on curated algorithm problem sets:
+**Retriever**  
+Fetches structured pattern knowledge, including usage conditions and implementation templates.
 
-Easy / Medium Benchmark: 8/8 problems solved
-Hard Benchmark: 8/8 problems solved
-Retry loop successfully corrected errors in complex cases
+**Planner**  
+Generates a structured solution plan including:
+- approach
+- pseudocode
+- edge cases
 
-These benchmarks include problems across:
+**Code Generator**  
+Produces Python code aligned with the plan and selected pattern.
 
-Sliding Window
-Hash Maps
-Stacks
-Binary Search
-Dynamic Programming
-Graph Traversal
-Backtracking
-Heaps
-Project Structure
+**Tester**  
+Executes generated code against test cases.
+
+**Evaluation Loop**  
+If the solution fails, the system uses feedback to iteratively refine and fix the code.
+
+---
+
+## Key Features
+
+- Multi-stage reasoning pipeline (not single-shot prompting)
+- Pattern-aware problem solving
+- Execution-based validation of generated code
+- Automatic retry and repair loop
+- Modular agent-based architecture
+- FastAPI backend for API access
+- Streamlit UI for interactive usage
+
+---
+
+## Tech Stack
+
+- Python
+- FastAPI
+- Streamlit
+- Claude API (Anthropic)
+- FAISS (optional for vector retrieval)
+
+---
+
+## Benchmark Results
+
+The system was evaluated on curated algorithm problem sets.
+
+### Easy / Medium Benchmark
+- 8 / 8 problems solved
+- 100% pattern classification accuracy
+- 100% test pass rate
+
+### Hard Benchmark
+- 8 / 8 problems solved
+- 7 / 8 correct pattern predictions (acceptable alternate patterns observed)
+- Retry loop successfully corrected errors in complex problems
+
+### Problem Coverage
+
+- Sliding Window
+- Hash Maps
+- Stacks
+- Binary Search
+- Dynamic Programming
+- Graph Traversal
+- Backtracking
+- Heaps / Priority Queues
+- Trees
+
+---
+
+## Project Structure
+
 leetcodeSolver/
 ├── app/
 │   ├── agent/
