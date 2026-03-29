@@ -110,28 +110,53 @@ The system was evaluated on curated algorithm problem sets.
 ## Project Structure
 
 leetcodeSolver/
+
 ├── app/
+
 │   ├── agent/
+
 │   │   ├── classifier.py
+
 │   │   ├── retriever.py
+
 │   │   ├── planner.py
+
 │   │   ├── coder.py
+
 │   │   ├── tester.py
+
 │   │   ├── workflow.py
+
 │   ├── utils/
+
 │   │   ├── json_utils.py
+
 │   ├── main.py
+
 │   ├── schemas.py
+
 │   ├── config.py
+
 ├── streamlit_app.py
+
 ├── requirements.txt
+
 └── README.md
-Running the Project
-1. Setup environment
+
+
+---
+
+## Getting Started
+
+### 1. Setup Environment
+
+```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+
 2. Start FastAPI backend
+
 python -m uvicorn app.main:app --reload
 
 Open API docs:
