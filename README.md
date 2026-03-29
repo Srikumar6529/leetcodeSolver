@@ -155,6 +155,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
+
 2. Start FastAPI backend
 
 python -m uvicorn app.main:app --reload
