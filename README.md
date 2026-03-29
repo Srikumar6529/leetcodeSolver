@@ -108,101 +108,79 @@ The system was evaluated on curated algorithm problem sets.
 ---
 
 ## Project Structure
-
+<pre>
 leetcodeSolver/
-
 ├── app/
-
 │   ├── agent/
-
 │   │   ├── classifier.py
-
 │   │   ├── retriever.py
-
 │   │   ├── planner.py
-
 │   │   ├── coder.py
-
 │   │   ├── tester.py
-
-│   │   ├── workflow.py
-
+│   │   └── workflow.py
 │   ├── utils/
-
-│   │   ├── json_utils.py
-
+│   │   └── json_utils.py
+│   ├── data/
+│   │   └── patterns.json
 │   ├── main.py
-
 │   ├── schemas.py
-
-│   ├── config.py
-
+│   └── config.py
 ├── streamlit_app.py
-
 ├── requirements.txt
-
 └── README.md
-
-
----
+</pre>
 
 ## Getting Started
-
-### 1. Setup Environment
+1. Setup Environment
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-
 2. Start FastAPI backend
-
 python -m uvicorn app.main:app --reload
 
 Open API docs:
-
 http://127.0.0.1:8000/docs
 3. Start Streamlit UI
 streamlit run streamlit_app.py
+
 Example Workflow Output
-
 Given a problem:
-
 Predicted Pattern: sliding_window
-Generated Plan:
-Approach description
-Pseudocode
-Edge cases
-Generated Code:
-Python function implementation
-Evaluation:
-Test results
-Pass/fail status
-Retry attempts (if needed)
+    Generated Plan:
+    Approach description
+    Pseudocode
+    Edge cases
+    Generated Code:
+    Python function implementation
+    Evaluation:
+    Test results
+    Pass/fail status
+    Retry attempts (if needed)
+
 Design Considerations
-The system separates reasoning (planning) from execution (coding), improving reliability.
-Execution-based evaluation ensures correctness beyond surface-level responses.
-Retry loop introduces feedback-driven refinement, making the system robust on harder problems.
-Structured JSON outputs enable modular composition of agents.
+    The system separates reasoning (planning) from execution (coding), improving reliability.
+    Execution-based evaluation ensures correctness beyond surface-level responses.
+    Retry loop introduces feedback-driven refinement, making the system robust on harder problems.
+    Structured JSON outputs enable modular composition of agents.
+
 Limitations
-Relies on LLM quality for reasoning and code generation
-Execution uses Python exec, which is not sandboxed for production environments
-Complex data structures (e.g., trees with custom classes) require additional abstraction handling
-Future Work
-Sandboxed execution environment
-Improved pattern taxonomy and retrieval
-Model-agnostic optimization for lower-cost inference
-Deployment as a hosted API
-Integration with real coding platforms
+    Relies on LLM quality for reasoning and code generation
+    Execution uses Python exec, which is not sandboxed for production environments
+    Complex data structures (e.g., trees with custom classes) require additional abstraction handling
+
 Summary
 
-This project demonstrates how to build a production-style agentic system for solving algorithmic problems by combining:
+    This project demonstrates how to build a production-style agentic system for solving algorithmic problems by combining:
+        structured reasoning
+        retrieval-augmented guidance
+        code generation
+        execution-based validation
+        iterative self-correction
 
-structured reasoning
-retrieval-augmented guidance
-code generation
-execution-based validation
-iterative self-correction
-
-It is designed to showcase practical skills in LLM application development, system design, and evaluation.
+    It is designed to showcase practical skills in:
+        LLM application development
+        system design
+        evaluation.
