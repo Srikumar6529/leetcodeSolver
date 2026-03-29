@@ -5,10 +5,10 @@
 
 import json
 from typing import List, Optional
-
+from app.utils.json_utils import parse_json_response
 from anthropic import Anthropic
 
-from config import (
+from app.config import (
     ANTHROPIC_API_KEY,
     CLAUDE_MODEL,
     MAX_CLASSIFIER_TOKENS,
@@ -88,11 +88,10 @@ Problem Statement:
 """.strip()
 
 
+
+
 def _safe_parse_classifier_output(raw_text: str) -> dict:
-    try:
-        parsed = json.loads(raw_text)
-    except json.JSONDecodeError as exc:
-        raise ValueError(f"Classifier returned invalid JSON: {raw_text}") from exc
+    parsed = parse_json_response(raw_text)
 
     if not isinstance(parsed, dict):
         raise ValueError("Classifier output must be a JSON object.")

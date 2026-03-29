@@ -1,7 +1,7 @@
 import json
 from anthropic import Anthropic
 
-from config import ANTHROPIC_API_KEY, CLAUDE_MODEL
+from app.config import ANTHROPIC_API_KEY, CLAUDE_MODEL
 
 client = Anthropic(api_key=ANTHROPIC_API_KEY)
 

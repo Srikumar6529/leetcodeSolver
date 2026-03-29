@@ -1,11 +1,11 @@
-from agent.classifier import classify_problem
-from agent.retriever import get_pattern_details
-from agent.planner import generate_plan
-from agent.coder import generate_code
-from agent.tester import evaluate_code
+from app.agent.classifier import classify_problem
+from app.agent.retriever import get_pattern_details
+from app.agent.planner import generate_plan
+from app.agent.coder import generate_code
+from app.agent.tester import evaluate_code
 
 from anthropic import Anthropic
-from config import ANTHROPIC_API_KEY, CLAUDE_MODEL
+from app.config import ANTHROPIC_API_KEY, CLAUDE_MODEL
 
 client = Anthropic(api_key=ANTHROPIC_API_KEY)
 

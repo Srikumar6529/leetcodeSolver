@@ -1,24 +1,35 @@
 from agent.workflow import run_agent
 
 problem = """
-Given an array of integers nums and an integer k, return the maximum sum of any contiguous subarray of size k.
+Given a string s, find the length of the longest substring without repeating characters.
 """
 
 examples = """
-Input: nums = [2,1,5,1,3,2], k = 3
-Output: 9
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
 """
 
 constraints = """
-1 <= len(nums) <= 10^5
+0 <= s.length <= 5 * 10^4
+s consists of English letters, digits, symbols and spaces.
 """
 
 test_cases = [
-    {"input": ([2,1,5,1,3,2], 3), "output": 9},
-    {"input": ([1,2,3,4,5], 2), "output": 9},
-    {"input": ([5,5,5,5], 1), "output": 5},
+    {"input": ("abcabcbb",), "output": 3},
+    {"input": ("bbbbb",), "output": 1},
+    {"input": ("pwwkew",), "output": 3},
+    {"input": ("",), "output": 0},
+    {"input": ("dvdf",), "output": 3},
 ]
 
 result = run_agent(problem, examples, constraints, test_cases)
-
 print(result)
