@@ -1,0 +1,146 @@
+[
+  {
+    "name": "arrays",
+    "display_name": "Arrays",
+    "use_when": "Use when the problem primarily involves traversing, updating, or analyzing elements in an array.",
+    "template": "Iterate through the array, track needed values, and apply the required logic efficiently.",
+    "time_complexity": "Usually O(n) or O(n log n), depending on sorting or extra operations.",
+    "space_complexity": "Usually O(1) to O(n)."
+  },
+  {
+    "name": "strings",
+    "display_name": "Strings",
+    "use_when": "Use when the problem involves text processing, substring analysis, or character-based operations.",
+    "template": "Traverse the string, compare characters, build substrings, or track frequencies as needed.",
+    "time_complexity": "Usually O(n) to O(n^2), depending on substring operations.",
+    "space_complexity": "Usually O(1) to O(n)."
+  },
+  {
+    "name": "hash_map",
+    "display_name": "Hash Map",
+    "use_when": "Use when fast lookup, counting, grouping, or tracking previously seen values is needed.",
+    "template": "Use a dictionary to store counts, indices, or values while traversing the input.",
+    "time_complexity": "Often O(n).",
+    "space_complexity": "Often O(n)."
+  },
+  {
+    "name": "two_pointers",
+    "display_name": "Two Pointers",
+    "use_when": "Use when scanning from both ends or maintaining two moving indices in a sorted or structured input.",
+    "template": "Initialize two pointers and move them based on comparisons or conditions.",
+    "time_complexity": "Often O(n).",
+    "space_complexity": "Often O(1)."
+  },
+  {
+    "name": "sliding_window",
+    "display_name": "Sliding Window",
+    "use_when": "Use for contiguous subarray or substring problems, especially when a window expands, shrinks, or stays fixed.",
+    "template": "Maintain a window with left and right boundaries, update state as it moves, and track the best valid result.",
+    "time_complexity": "Often O(n).",
+    "space_complexity": "Usually O(1) or O(k)."
+  },
+  {
+    "name": "binary_search",
+    "display_name": "Binary Search",
+    "use_when": "Use when the search space is sorted or when an answer can be found by repeatedly halving a monotonic range.",
+    "template": "Use left, right, and mid pointers to narrow the search space until the answer is found.",
+    "time_complexity": "Often O(log n).",
+    "space_complexity": "Usually O(1)."
+  },
+  {
+    "name": "stack",
+    "display_name": "Stack",
+    "use_when": "Use when the problem requires last-in-first-out behavior, matching pairs, or monotonic processing.",
+    "template": "Push and pop elements based on conditions while maintaining stack invariants.",
+    "time_complexity": "Often O(n).",
+    "space_complexity": "Often O(n)."
+  },
+  {
+    "name": "queue",
+    "display_name": "Queue",
+    "use_when": "Use when the problem requires first-in-first-out processing, level-order traversal, or scheduling.",
+    "template": "Process elements in arrival order using a queue, often for BFS or ordered simulation.",
+    "time_complexity": "Often O(n).",
+    "space_complexity": "Often O(n)."
+  },
+  {
+    "name": "linked_list",
+    "display_name": "Linked List",
+    "use_when": "Use when pointer manipulation, node traversal, or in-place structural updates are central.",
+    "template": "Track current and previous nodes carefully and update links without losing references.",
+    "time_complexity": "Usually O(n).",
+    "space_complexity": "Usually O(1)."
+  },
+  {
+    "name": "tree",
+    "display_name": "Tree",
+    "use_when": "Use when hierarchical data, recursive traversal, or subtree-based reasoning is involved.",
+    "template": "Use DFS or BFS traversal and compute results from child nodes or levels.",
+    "time_complexity": "Often O(n).",
+    "space_complexity": "Often O(h) to O(n)."
+  },
+  {
+    "name": "graph",
+    "display_name": "Graph",
+    "use_when": "Use when nodes and edges define relationships, connectivity, shortest paths, or traversal problems.",
+    "template": "Model the structure as a graph and solve using BFS, DFS, topological sort, or shortest-path methods.",
+    "time_complexity": "Often O(V + E).",
+    "space_complexity": "Often O(V + E)."
+  },
+  {
+    "name": "heap_priority_queue",
+    "display_name": "Heap / Priority Queue",
+    "use_when": "Use when repeated access to the minimum or maximum element is needed efficiently.",
+    "template": "Push candidates into a heap and pop the smallest or largest as required by the problem.",
+    "time_complexity": "Often O(n log n) or O(k log n).",
+    "space_complexity": "Often O(n)."
+  },
+  {
+    "name": "backtracking",
+    "display_name": "Backtracking",
+    "use_when": "Use when exploring all valid combinations, permutations, or constrained search paths.",
+    "template": "Build a partial solution recursively, undo choices, and explore all valid branches.",
+    "time_complexity": "Often exponential.",
+    "space_complexity": "Depends on recursion depth and stored paths."
+  },
+  {
+    "name": "greedy",
+    "display_name": "Greedy",
+    "use_when": "Use when making the locally optimal choice at each step leads to a global optimum.",
+    "template": "Make the best immediate choice, track feasibility, and avoid unnecessary recomputation.",
+    "time_complexity": "Usually O(n) to O(n log n).",
+    "space_complexity": "Usually O(1) to O(n)."
+  },
+  {
+    "name": "dynamic_programming",
+    "display_name": "Dynamic Programming",
+    "use_when": "Use when the problem has overlapping subproblems and optimal substructure.",
+    "template": "Define states, transitions, and base cases, then compute results using memoization or tabulation.",
+    "time_complexity": "Varies by state space.",
+    "space_complexity": "Varies by DP table or memoization."
+  },
+  {
+    "name": "recursion",
+    "display_name": "Recursion",
+    "use_when": "Use when the problem naturally breaks into smaller instances of the same form.",
+    "template": "Define a base case and recursive relation, then solve smaller subproblems repeatedly.",
+    "time_complexity": "Depends on branching and depth.",
+    "space_complexity": "Depends on recursion depth."
+  },
+  {
+    "name": "matrix",
+    "display_name": "Matrix",
+    "use_when": "Use when the problem operates on 2D grids, directional traversal, or cell-based state updates.",
+    "template": "Traverse rows and columns carefully, often using direction vectors or visited tracking.",
+    "time_complexity": "Usually O(rows * cols).",
+    "space_complexity": "Usually O(1) to O(rows * cols)."
+  },
+  {
+    "name": "bit_manipulation",
+    "display_name": "Bit Manipulation",
+    "use_when": "Use when binary representation, masks, toggling bits, or XOR properties simplify the solution.",
+    "template": "Apply bitwise operations such as AND, OR, XOR, shifts, or masks to transform and inspect values.",
+    "time_complexity": "Often O(1) or O(n).",
+    "space_complexity": "Often O(1)."
+  }
+]
