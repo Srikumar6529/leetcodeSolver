@@ -143,8 +143,10 @@ python -m uvicorn app.main:app --reload
 
 Open API docs:
 http://127.0.0.1:8000/docs
+
 3. Start Streamlit UI
 streamlit run streamlit_app.py
+'```'
 
 Example Workflow Output
 Given a problem:
