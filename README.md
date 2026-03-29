@@ -149,8 +149,11 @@ streamlit run streamlit_app.py
 ```
 
 Example Workflow Output
+
 Given a problem:
+
 Predicted Pattern: sliding_window
+
     Generated Plan:
     Approach description
     Pseudocode
@@ -163,12 +166,14 @@ Predicted Pattern: sliding_window
     Retry attempts (if needed)
 
 Design Considerations
+
     The system separates reasoning (planning) from execution (coding), improving reliability.
     Execution-based evaluation ensures correctness beyond surface-level responses.
     Retry loop introduces feedback-driven refinement, making the system robust on harder problems.
     Structured JSON outputs enable modular composition of agents.
 
 Limitations
+
     Relies on LLM quality for reasoning and code generation
     Execution uses Python exec, which is not sandboxed for production environments
     Complex data structures (e.g., trees with custom classes) require additional abstraction handling
