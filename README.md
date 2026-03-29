@@ -1,13 +1,19 @@
-Agentic LeetCode Solver using Claude API
-Overview
+# Agentic LeetCode Solver using Claude API
 
-This project implements an agentic coding workflow that solves algorithmic problems by combining structured reasoning, pattern retrieval, code generation, and execution-based validation.
+## Overview
 
-Instead of relying on a single prompt, the system decomposes the problem-solving process into multiple stages, enabling more reliable and interpretable solutions.
+This project implements an **agentic coding workflow** that solves algorithmic problems by combining structured reasoning, pattern retrieval, code generation, and execution-based validation.
 
-Architecture
+Instead of relying on a single prompt, the system decomposes problem solving into multiple stages, enabling more reliable, interpretable, and correct solutions.
+
+The system is designed to reflect how real-world AI systems operate: iterative, modular, and evaluation-driven.
+
+---
+
+## Architecture
 
 The system follows a multi-stage pipeline:
+
 
 Problem Input
 → Classification
